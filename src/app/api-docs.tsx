@@ -36,7 +36,27 @@ const endpoints: Endpoint[] = [
     title: "Daftar Semua Cafe",
     group: "Cafes",
     params: [],
-    queryParams: [],
+    queryParams: [
+      {
+        name: "category",
+        type: "string",
+        required: false,
+        description:
+          "Filter by category slug (e.g. industrial, slowbar, rooftop)",
+      },
+      {
+        name: "area",
+        type: "string",
+        required: false,
+        description: "Filter by area name (e.g. Tembalang, Kota Lama)",
+      },
+      {
+        name: "search",
+        type: "string",
+        required: false,
+        description: "Cari berdasarkan nama, area, atau kategori",
+      },
+    ],
     exampleResponse: {
       success: true,
       data: [
@@ -44,11 +64,12 @@ const endpoints: Endpoint[] = [
           id: 1,
           name: "KOV Koffie",
           slug: "kov-koffie",
-          thumbnail: "/images/kov-koffie.jpg",
           rating: 4.6,
           reviewCount: 312,
           priceRange: "Rp20-45rb",
           area: "Candisari",
+          category: "industrial",
+          thumbnail: "/images/coffee-place.webp",
         },
       ],
     },
@@ -76,36 +97,15 @@ const endpoints: Endpoint[] = [
         reviewCount: 312,
         priceRange: "Rp20-45rb",
         area: "Candisari",
+        category: "industrial",
+        thumbnail: "/images/coffee-place.webp",
         description:
           "Coffee shop dengan konsep industrial minimalis yang buka 24 jam...",
         address: "Jl. Sultan Agung No.135, Kaliwiru, Kec. Candisari",
         hours: "24 jam (setiap hari)",
         phone: "0858-8083-3418",
         instagram: "@kovkoffie",
-        gallery: ["/images/kov-1.jpg"],
-        facilities: ["WiFi", "Colokan", "AC", "Rooftop", "Parkir Luas"],
-        categoryId: 5,
       },
-    },
-  },
-  {
-    method: "GET",
-    path: "/api/categories",
-    title: "Daftar Kategori",
-    group: "Categories",
-    params: [],
-    queryParams: [],
-    exampleResponse: {
-      success: true,
-      data: [
-        { id: 1, name: "Coffee Shop", slug: "coffee-shop", icon: "☕" },
-        { id: 2, name: "Cafe & Eatery", slug: "cafe-eatery", icon: "🍽️" },
-        { id: 3, name: "Slowbar", slug: "slowbar", icon: "🧪" },
-        { id: 4, name: "Rooftop", slug: "rooftop", icon: "🌇" },
-        { id: 5, name: "Industrial", slug: "industrial", icon: "🏭" },
-        { id: 6, name: "Alam & Outdoor", slug: "alam-outdoor", icon: "🌿" },
-        { id: 7, name: "24 Jam", slug: "24-jam", icon: "🕐" },
-      ],
     },
   },
   {
@@ -452,18 +452,16 @@ export default function ApiDocs() {
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
           lg:sticky lg:top-0 lg:translate-x-0 lg:h-[100dvh]`}
       >
-        <div className="p-4 border-b border-zinc-800/50 relative">
-          <div className="flex items-center justify-center mb-3">
-            <span className="text-sm font-semibold text-zinc-100">
-              Mobile AFG 2026
-            </span>
-            <button
-              onClick={() => setSidebarOpen(false)}
-              className="lg:hidden p-1.5 rounded-lg hover:bg-zinc-800 transition-colors absolute right-4"
-            >
-              <X size={16} />
-            </button>
-          </div>
+        <div className="flex items-center justify-between p-4 border-b border-zinc-800/50">
+          <span className="text-sm font-semibold text-zinc-100">
+            Mobile AFG 2026
+          </span>
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="lg:hidden p-1.5 rounded-lg hover:bg-zinc-800 transition-colors"
+          >
+            <X size={16} />
+          </button>
         </div>
         <div className="flex-1 overflow-y-auto py-3">
           <EndpointNav
@@ -489,7 +487,7 @@ export default function ApiDocs() {
       {/* Main */}
       <main className="flex-1 min-w-0">
         {/* Top bar */}
-        <header className="sticky top-0 z-20 bg-zinc-950/80 backdrop-blur-2xl border-b border-zinc-800/50">
+        {/*<header className="sticky top-0 z-20 bg-zinc-950/80 backdrop-blur-2xl border-b border-zinc-800/50">
           <div className="flex items-center justify-between px-4 lg:px-8 h-14">
             <button
               onClick={() => setSidebarOpen(true)}
@@ -499,7 +497,7 @@ export default function ApiDocs() {
             </button>
             <div />
           </div>
-        </header>
+        </header>*/}
 
         <div className="max-w-4xl mx-auto px-4 lg:px-8 py-8 lg:py-12 space-y-10">
           {/* Endpoint header */}
@@ -596,12 +594,6 @@ export default function ApiDocs() {
               {highlightJson(formatJson(active.exampleResponse))}
             </pre>
           </section>
-
-          <footer className="pt-8 border-t border-zinc-800/30 text-center">
-            <p className="text-[11px] text-zinc-700">
-              afg-api · Next.js 16 · TypeScript · Data real coffee shop Semarang
-            </p>
-          </footer>
         </div>
       </main>
     </div>

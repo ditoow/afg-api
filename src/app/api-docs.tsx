@@ -69,7 +69,7 @@ const endpoints: Endpoint[] = [
           priceRange: "Rp20-45rb",
           area: "Candisari",
           category: "industrial",
-          thumbnail: "/images/coffee-place.webp",
+          thumbnail: "images/cafe-place.webp",
         },
       ],
     },
@@ -98,7 +98,7 @@ const endpoints: Endpoint[] = [
         priceRange: "Rp20-45rb",
         area: "Candisari",
         category: "industrial",
-        thumbnail: "/images/coffee-place.webp",
+        thumbnail: "images/cafe-place.webp",
         description:
           "Coffee shop dengan konsep industrial minimalis yang buka 24 jam...",
         address: "Jl. Sultan Agung No.135, Kaliwiru, Kec. Candisari",

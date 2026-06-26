@@ -39,7 +39,7 @@ export const cafes: CafeWithRelations[] = [
     priceRange: "Rp20-45rb",
     area: "Candisari",
     category: "industrial",
-    thumbnail: "/images/coffee-place.webp",
+    thumbnail: "images/cafe-place.webp",
     description:
       "Coffee shop dengan konsep industrial minimalis yang buka 24 jam. Terdiri dari tiga lantai dengan area rooftop yang nyaman. Cocok untuk work-from-cafe, nongkrong santai, atau meeting informal.",
     address: "Jl. Sultan Agung No.135, Kaliwiru, Kec. Candisari",
@@ -65,7 +65,7 @@ export const cafes: CafeWithRelations[] = [
     priceRange: "Rp25-60rb",
     area: "Semarang Barat",
     category: "slowbar",
-    thumbnail: "/images/coffee-place.webp",
+    thumbnail: "images/cafe-place.webp",
     description:
       "Legenda specialty coffee di Semarang. Tempat ini terkenal dengan pengalaman slowbar yang personal dan edukatif. Kadang kamu bisa ngobrol langsung soal roasting dan sejarah kopi Semarang dengan baristanya.",
     address: "Jl. Karangtempel Raya No.12, Semarang Barat",
@@ -89,7 +89,7 @@ export const cafes: CafeWithRelations[] = [
     priceRange: "Rp25-50rb",
     area: "Kota Lama",
     category: "24-jam",
-    thumbnail: "/images/coffee-place.webp",
+    thumbnail: "images/cafe-place.webp",
     description:
       "Tempat nongkrong 24 jam yang hits banget. Tersembunyi di dalam Kotta Hotel Semarang, kawasan Kota Lama. Vibenya cocok buat anak muda gaul dengan desain artsy dan estetik.",
     address: "Kotta Hotel Semarang, Jl. Letjen Suprapto No.29, Kota Lama",
@@ -111,7 +111,7 @@ export const cafes: CafeWithRelations[] = [
     priceRange: "Rp25-50rb",
     area: "Simpang Lima",
     category: "industrial",
-    thumbnail: "/images/coffee-place.webp",
+    thumbnail: "images/cafe-place.webp",
     description:
       "Coffee shop dengan identitas industrial yang sangat kuat dan konsisten di setiap sudutnya. Area tribun yang estetik menjadi spot favorit pengunjung untuk berfoto atau sekadar duduk santai tanpa meja formal. Bangunan luas berlantai dua.",
     address: "Jl. Pandanaran No.25, Simpang Lima, Semarang",
@@ -134,7 +134,7 @@ export const cafes: CafeWithRelations[] = [
     priceRange: "Rp30-100rb",
     area: "Kota Lama",
     category: "cafe-eatery",
-    thumbnail: "/images/coffee-place.webp",
+    thumbnail: "images/cafe-place.webp",
     description:
       "Berada di kawasan bersejarah Kota Lama, kafe ini berhasil menggabungkan nuansa kontemporer dengan elemen industrial yang elegan. Suasananya estetik dan memberikan kesan mewah namun tetap ramah.",
     address: "Kawasan Kota Lama, Jl. Letjen Suprapto No.15, Semarang",
@@ -158,7 +158,7 @@ export const cafes: CafeWithRelations[] = [
     priceRange: "Rp20-45rb",
     area: "Pusat Kota",
     category: "rooftop",
-    thumbnail: "/images/coffee-place.webp",
+    thumbnail: "images/cafe-place.webp",
     description:
       "Primadona di pusat kota dengan tiga lantai yang masing-masing memiliki karakter berbeda. Area rooftop-nya menawarkan pemandangan kota Semarang yang sangat berkesan. Hidup namun tetap santai, jadi titik kumpul favorit berbagai komunitas.",
     address: "Jl. Pemuda No.88, Sekayu, Semarang Tengah",
@@ -180,7 +180,7 @@ export const cafes: CafeWithRelations[] = [
     priceRange: "Rp10-35rb",
     area: "Gajah Mungkur",
     category: "coffee-shop",
-    thumbnail: "/images/coffee-place.webp",
+    thumbnail: "images/cafe-place.webp",
     description:
       "Kedai kopi dengan interior hangat bernuansa kayu dan pencahayaan temaram. Bukaan kaca lebar memungkinkan cahaya matahari masuk di pagi hari. Tempat yang pas buat memulai hari dengan secangkir kopi.",
     address: "Jl. Gajah Mungkur No.45, Gajah Mungkur, Semarang",

@@ -24,6 +24,7 @@ export type MenuItem = {
   price: number
   category: string
   isRecommended: boolean
+  images: string
 }
 
 export type CafeWithRelations = CafeDetail & {
@@ -47,14 +48,14 @@ export const cafes: CafeWithRelations[] = [
     phone: "0858-8083-3418",
     instagram: "@kovkoffie",
     menus: [
-      { id: 1, name: "Es Kopi Nako", description: "Espresso susu gula aren", price: 23000, category: "Kopi", isRecommended: true },
-      { id: 2, name: "Es Kopi Nako Setrong", description: "Double shot espresso susu", price: 25000, category: "Kopi", isRecommended: false },
-      { id: 3, name: "Cappuccino ala Nako", description: "Cappuccino creamy khas", price: 29000, category: "Kopi", isRecommended: false },
-      { id: 4, name: "Avocado Coffee", description: "Kopi dengan alpukat segar", price: 29000, category: "Kopi", isRecommended: true },
-      { id: 5, name: "Manual Brew", description: "V60 / Aeropress specialty", price: 29000, category: "Kopi", isRecommended: false },
-      { id: 6, name: "Matcha Latte", description: "Matcha asli Jepang dengan susu", price: 29000, category: "Non-Kopi", isRecommended: false },
-      { id: 7, name: "Nasi Merem Melek", description: "Nasi goreng kekinian", price: 35000, category: "Makanan", isRecommended: true },
-      { id: 8, name: "Mie Ayam Nako", description: "Mie ayam dengan topping melimpah", price: 37000, category: "Makanan", isRecommended: false },
+      { id: 1, name: "Es Kopi Nako", description: "Espresso susu gula aren", price: 23000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 2, name: "Es Kopi Nako Setrong", description: "Double shot espresso susu", price: 25000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 3, name: "Cappuccino ala Nako", description: "Cappuccino creamy khas", price: 29000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 4, name: "Avocado Coffee", description: "Kopi dengan alpukat segar", price: 29000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 5, name: "Manual Brew", description: "V60 / Aeropress specialty", price: 29000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 6, name: "Matcha Latte", description: "Matcha asli Jepang dengan susu", price: 29000, category: "Non-Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 7, name: "Nasi Merem Melek", description: "Nasi goreng kekinian", price: 35000, category: "Makanan", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 8, name: "Mie Ayam Nako", description: "Mie ayam dengan topping melimpah", price: 37000, category: "Makanan", isRecommended: false, images: "/images/coffe.webp" },
     ],
   },
   {
@@ -73,12 +74,12 @@ export const cafes: CafeWithRelations[] = [
     phone: "0821-4567-8901",
     instagram: "@dharmaboutique",
     menus: [
-      { id: 1, name: "Pour Over", description: "Manual brew dengan pilihan single origin", price: 45000, category: "Kopi", isRecommended: true },
-      { id: 2, name: "Espresso Single Origin", description: "Espresso dari biji pilihan", price: 35000, category: "Kopi", isRecommended: false },
-      { id: 3, name: "Cafe Latte", description: "Latte dengan roasted beans signature", price: 40000, category: "Kopi", isRecommended: false },
-      { id: 4, name: "Cold Brew", description: "Cold brew 12 jam ekstraksi lambat", price: 42000, category: "Kopi", isRecommended: true },
-      { id: 5, name: "Batch Brew", description: "Brew harian, ganti setiap minggu", price: 35000, category: "Kopi", isRecommended: false },
-      { id: 6, name: "Cheesecake", description: "New York cheesecake homemade", price: 35000, category: "Makanan", isRecommended: false },
+      { id: 1, name: "Pour Over", description: "Manual brew dengan pilihan single origin", price: 45000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 2, name: "Espresso Single Origin", description: "Espresso dari biji pilihan", price: 35000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 3, name: "Cafe Latte", description: "Latte dengan roasted beans signature", price: 40000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 4, name: "Cold Brew", description: "Cold brew 12 jam ekstraksi lambat", price: 42000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 5, name: "Batch Brew", description: "Brew harian, ganti setiap minggu", price: 35000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 6, name: "Cheesecake", description: "New York cheesecake homemade", price: 35000, category: "Makanan", isRecommended: false, images: "/images/coffe.webp" },
     ],
   },
   {
@@ -97,10 +98,10 @@ export const cafes: CafeWithRelations[] = [
     phone: "0812-3456-7890",
     instagram: "@headroomcoffee",
     menus: [
-      { id: 1, name: "Signature Latte", description: "Latte khas Headroom dengan house blend", price: 35000, category: "Kopi", isRecommended: true },
-      { id: 2, name: "Tarik (Teh Tarik)", description: "Teh tarik creamy khas Indonesia", price: 25000, category: "Non-Kopi", isRecommended: false },
-      { id: 3, name: "French Fries", description: "Kentang goreng dengan saus pilihan", price: 28000, category: "Makanan", isRecommended: false },
-      { id: 4, name: "Chicken Wings", description: "Sayap ayam goreng saus pedas manis", price: 38000, category: "Makanan", isRecommended: true },
+      { id: 1, name: "Signature Latte", description: "Latte khas Headroom dengan house blend", price: 35000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 2, name: "Tarik (Teh Tarik)", description: "Teh tarik creamy khas Indonesia", price: 25000, category: "Non-Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 3, name: "French Fries", description: "Kentang goreng dengan saus pilihan", price: 28000, category: "Makanan", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 4, name: "Chicken Wings", description: "Sayap ayam goreng saus pedas manis", price: 38000, category: "Makanan", isRecommended: true, images: "/images/coffe.webp" },
     ],
   },
   {
@@ -119,11 +120,11 @@ export const cafes: CafeWithRelations[] = [
     phone: "0857-8901-2345",
     instagram: "@anakpanahkopi",
     menus: [
-      { id: 1, name: "Kopi Susu Kekinian", description: "Kopi susu gula aren mantap", price: 25000, category: "Kopi", isRecommended: true },
-      { id: 2, name: "Americano", description: "American hitam pekat", price: 22000, category: "Kopi", isRecommended: false },
-      { id: 3, name: "V60 Manual Brew", description: "Manual brew single origin", price: 35000, category: "Kopi", isRecommended: false },
-      { id: 4, name: "Banana Smoothie", description: "Smoothie pisang segar", price: 28000, category: "Non-Kopi", isRecommended: false },
-      { id: 5, name: "Nasi Goreng Tribun", description: "Nasi goreng spesial", price: 38000, category: "Makanan", isRecommended: true },
+      { id: 1, name: "Kopi Susu Kekinian", description: "Kopi susu gula aren mantap", price: 25000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 2, name: "Americano", description: "American hitam pekat", price: 22000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 3, name: "V60 Manual Brew", description: "Manual brew single origin", price: 35000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 4, name: "Banana Smoothie", description: "Smoothie pisang segar", price: 28000, category: "Non-Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 5, name: "Nasi Goreng Tribun", description: "Nasi goreng spesial", price: 38000, category: "Makanan", isRecommended: true, images: "/images/coffe.webp" },
     ],
   },
   {
@@ -142,12 +143,12 @@ export const cafes: CafeWithRelations[] = [
     phone: "0822-5678-9012",
     instagram: "@obsidiansmg",
     menus: [
-      { id: 1, name: "Espresso", description: "Espresso signature blend", price: 30000, category: "Kopi", isRecommended: false },
-      { id: 2, name: "Cafe Latte", description: "Latte dengan latte art", price: 40000, category: "Kopi", isRecommended: true },
-      { id: 3, name: "Moccacino", description: "Coklat campur kopi creamy", price: 45000, category: "Kopi", isRecommended: false },
-      { id: 4, name: "Steak Ayam", description: "Ayam steak dengan saus blackpepper", price: 85000, category: "Makanan", isRecommended: true },
-      { id: 5, name: "Pasta Aglio Olio", description: "Pasta dengan bawang putih dan minyak zaitun", price: 65000, category: "Makanan", isRecommended: false },
-      { id: 6, name: "Red Velvet", description: "Red velvet latte", price: 45000, category: "Non-Kopi", isRecommended: false },
+      { id: 1, name: "Espresso", description: "Espresso signature blend", price: 30000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 2, name: "Cafe Latte", description: "Latte dengan latte art", price: 40000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 3, name: "Moccacino", description: "Coklat campur kopi creamy", price: 45000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 4, name: "Steak Ayam", description: "Ayam steak dengan saus blackpepper", price: 85000, category: "Makanan", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 5, name: "Pasta Aglio Olio", description: "Pasta dengan bawang putih dan minyak zaitun", price: 65000, category: "Makanan", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 6, name: "Red Velvet", description: "Red velvet latte", price: 45000, category: "Non-Kopi", isRecommended: false, images: "/images/coffe.webp" },
     ],
   },
   {
@@ -166,10 +167,10 @@ export const cafes: CafeWithRelations[] = [
     phone: "0856-7890-1234",
     instagram: "@jaggadcoffee",
     menus: [
-      { id: 1, name: "Kopi Susu Jaggad", description: "Kopi susu signature Jaggad", price: 25000, category: "Kopi", isRecommended: true },
-      { id: 2, name: "Vanilla Latte", description: "Latte dengan vanilla syrup", price: 30000, category: "Kopi", isRecommended: false },
-      { id: 3, name: "Matcha Cream", description: "Matcha dengan cream toping", price: 32000, category: "Non-Kopi", isRecommended: false },
-      { id: 4, name: "Chicken Katsu", description: "Ayam katsu dengan nasi dan salad", price: 40000, category: "Makanan", isRecommended: true },
+      { id: 1, name: "Kopi Susu Jaggad", description: "Kopi susu signature Jaggad", price: 25000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 2, name: "Vanilla Latte", description: "Latte dengan vanilla syrup", price: 30000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 3, name: "Matcha Cream", description: "Matcha dengan cream toping", price: 32000, category: "Non-Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 4, name: "Chicken Katsu", description: "Ayam katsu dengan nasi dan salad", price: 40000, category: "Makanan", isRecommended: true, images: "/images/coffe.webp" },
     ],
   },
   {
@@ -188,12 +189,12 @@ export const cafes: CafeWithRelations[] = [
     phone: "0845-6789-0123",
     instagram: "@paperplaneproject",
     menus: [
-      { id: 1, name: "Espresso", description: "Single shot espresso", price: 15000, category: "Kopi", isRecommended: false },
-      { id: 2, name: "Cappuccino", description: "Cappuccino klasik", price: 20000, category: "Kopi", isRecommended: false },
-      { id: 3, name: "Kopi Susu Gula Aren", description: "Kopi susu dengan gula aren asli", price: 22000, category: "Kopi", isRecommended: true },
-      { id: 4, name: "Ice Tea", description: "Teh manis segar", price: 10000, category: "Non-Kopi", isRecommended: false },
-      { id: 5, name: "Mendoan", description: "Tempe mendoan crispy", price: 12000, category: "Makanan", isRecommended: true },
-      { id: 6, name: "Croissant", description: "Croissant buttery homemade", price: 18000, category: "Makanan", isRecommended: false },
+      { id: 1, name: "Espresso", description: "Single shot espresso", price: 15000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 2, name: "Cappuccino", description: "Cappuccino klasik", price: 20000, category: "Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 3, name: "Kopi Susu Gula Aren", description: "Kopi susu dengan gula aren asli", price: 22000, category: "Kopi", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 4, name: "Ice Tea", description: "Teh manis segar", price: 10000, category: "Non-Kopi", isRecommended: false, images: "/images/coffe.webp" },
+      { id: 5, name: "Mendoan", description: "Tempe mendoan crispy", price: 12000, category: "Makanan", isRecommended: true, images: "/images/coffe.webp" },
+      { id: 6, name: "Croissant", description: "Croissant buttery homemade", price: 18000, category: "Makanan", isRecommended: false, images: "/images/coffe.webp" },
     ],
   },
 ]

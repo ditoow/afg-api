@@ -36,20 +36,7 @@ const endpoints: Endpoint[] = [
     title: "Daftar Semua Cafe",
     group: "Cafes",
     params: [],
-    queryParams: [
-      {
-        name: "area",
-        type: "string",
-        required: false,
-        description: "Filter by area name (e.g. Tembalang, Kota Lama)",
-      },
-      {
-        name: "search",
-        type: "string",
-        required: false,
-        description: "Cari berdasarkan nama, area, atau kategori",
-      },
-    ],
+    queryParams: [],
     exampleResponse: {
       success: true,
       data: [
@@ -152,7 +139,6 @@ const endpoints: Endpoint[] = [
       ],
     },
   },
-
 ];
 
 const methodColors: Record<string, { bg: string; text: string }> = {
@@ -343,13 +329,6 @@ function TryItPanel({
   return (
     <div className="space-y-5">
       <div>
-        <div className="flex items-center gap-3 mb-3">
-          <h4 className="text-sm font-medium text-zinc-200">Try it</h4>
-          <span className="text-[10px] text-zinc-600 font-mono">
-            — real request against running server
-          </span>
-        </div>
-
         <div className="flex items-center gap-2 bg-zinc-900 ring-1 ring-zinc-800 rounded-xl px-4 py-3 font-mono text-sm">
           <span
             className={`text-[11px] font-semibold px-1.5 py-0.5 rounded ${
@@ -475,7 +454,9 @@ export default function ApiDocs() {
       >
         <div className="p-4 border-b border-zinc-800/50 relative">
           <div className="flex items-center justify-center mb-3">
-            <span className="text-sm font-semibold text-zinc-100">Mobile AFG 2026</span>
+            <span className="text-sm font-semibold text-zinc-100">
+              Mobile AFG 2026
+            </span>
             <button
               onClick={() => setSidebarOpen(false)}
               className="lg:hidden p-1.5 rounded-lg hover:bg-zinc-800 transition-colors absolute right-4"
@@ -536,7 +517,6 @@ export default function ApiDocs() {
               </code>
               <CopyButton text={`${baseUrl}${active.path}`} />
             </div>
-
           </section>
 
           {/* Parameters */}

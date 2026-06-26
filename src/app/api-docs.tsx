@@ -15,7 +15,7 @@ type Endpoint = {
   method: "GET";
   path: string;
   title: string;
-  description: string;
+  description?: string;
   group: string;
   params: Param[];
   queryParams: Param[];
@@ -34,8 +34,6 @@ const endpoints: Endpoint[] = [
     method: "GET",
     path: "/api/cafes",
     title: "Daftar Semua Cafe",
-    description:
-      "Mengambil seluruh daftar tempat nongkrong di Semarang. Mendukung filter berdasarkan kategori, area, dan pencarian teks.",
     group: "Cafes",
     params: [],
     queryParams: [
@@ -81,8 +79,6 @@ const endpoints: Endpoint[] = [
     method: "GET",
     path: "/api/cafes/:id",
     title: "Detail Cafe",
-    description:
-      "Mengambil informasi lengkap satu tempat nongkrong berdasarkan ID.",
     group: "Cafes",
     params: [
       {
@@ -118,8 +114,6 @@ const endpoints: Endpoint[] = [
     method: "GET",
     path: "/api/categories",
     title: "Daftar Kategori",
-    description:
-      "Mengambil seluruh kategori tempat nongkrong. Cocok untuk filter chips atau dropdown.",
     group: "Categories",
     params: [],
     queryParams: [],
@@ -140,7 +134,6 @@ const endpoints: Endpoint[] = [
     method: "GET",
     path: "/api/cafes/:id/menus",
     title: "Menu Cafe",
-    description: "Mengambil daftar menu makanan dan minuman dari sebuah cafe.",
     group: "Menus",
     params: [
       { name: "id", type: "number", required: true, description: "ID cafe" },
@@ -168,59 +161,7 @@ const endpoints: Endpoint[] = [
       ],
     },
   },
-  {
-    method: "GET",
-    path: "/api/cafes/:id/menus/:menuId",
-    title: "Detail Menu",
-    description: "Mengambil detail satu item menu dari sebuah cafe.",
-    group: "Menus",
-    params: [
-      { name: "id", type: "number", required: true, description: "ID cafe" },
-      {
-        name: "menuId",
-        type: "number",
-        required: true,
-        description: "ID menu item",
-      },
-    ],
-    queryParams: [],
-    exampleResponse: {
-      success: true,
-      data: {
-        id: 1,
-        name: "Es Kopi Nako",
-        description: "Espresso susu gula aren",
-        price: 23000,
-        category: "Kopi",
-        isRecommended: true,
-        cafeName: "KOV Koffie",
-      },
-    },
-  },
-  {
-    method: "GET",
-    path: "/api/cafes/:id/reviews",
-    title: "Review Cafe",
-    description: "Mengambil daftar review pengunjung untuk sebuah cafe.",
-    group: "Reviews",
-    params: [
-      { name: "id", type: "number", required: true, description: "ID cafe" },
-    ],
-    queryParams: [],
-    exampleResponse: {
-      success: true,
-      data: [
-        {
-          id: 1,
-          author: "Rina S.",
-          avatar: "",
-          rating: 5,
-          comment: "Tempatnya nyaman banget buat WFC...",
-          date: "2026-05-20",
-        },
-      ],
-    },
-  },
+
 ];
 
 const methodColors: Record<string, { bg: string; text: string }> = {
@@ -604,9 +545,7 @@ export default function ApiDocs() {
               </code>
               <CopyButton text={`${baseUrl}${active.path}`} />
             </div>
-            <p className="text-sm text-zinc-400 leading-relaxed max-w-2xl">
-              {active.description}
-            </p>
+
           </section>
 
           {/* Parameters */}

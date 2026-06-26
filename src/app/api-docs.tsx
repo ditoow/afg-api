@@ -38,13 +38,6 @@ const endpoints: Endpoint[] = [
     params: [],
     queryParams: [
       {
-        name: "category",
-        type: "string",
-        required: false,
-        description:
-          "Filter by category slug (e.g. industrial, slowbar, rooftop)",
-      },
-      {
         name: "area",
         type: "string",
         required: false,
@@ -69,8 +62,6 @@ const endpoints: Endpoint[] = [
           reviewCount: 312,
           priceRange: "Rp20-45rb",
           area: "Candisari",
-          categorySlug: "industrial",
-          categoryName: "Industrial",
         },
       ],
     },

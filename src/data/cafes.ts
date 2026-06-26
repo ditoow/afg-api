@@ -5,8 +5,6 @@ export type CafeListItem = {
   reviewCount: number
   priceRange: string
   area: string
-  categorySlug: string
-  categoryName: string
 }
 
 export type CafeDetail = CafeListItem & {
@@ -38,8 +36,6 @@ export const cafes: CafeWithRelations[] = [
     reviewCount: 312,
     priceRange: "Rp20-45rb",
     area: "Candisari",
-    categorySlug: "industrial",
-    categoryName: "Industrial",
     description:
       "Coffee shop dengan konsep industrial minimalis yang buka 24 jam. Terdiri dari tiga lantai dengan area rooftop yang nyaman. Cocok untuk work-from-cafe, nongkrong santai, atau meeting informal.",
     address: "Jl. Sultan Agung No.135, Kaliwiru, Kec. Candisari",
@@ -64,8 +60,6 @@ export const cafes: CafeWithRelations[] = [
     reviewCount: 189,
     priceRange: "Rp25-60rb",
     area: "Semarang Barat",
-    categorySlug: "slowbar",
-    categoryName: "Slowbar",
     description:
       "Legenda specialty coffee di Semarang. Tempat ini terkenal dengan pengalaman slowbar yang personal dan edukatif. Kadang kamu bisa ngobrol langsung soal roasting dan sejarah kopi Semarang dengan baristanya.",
     address: "Jl. Karangtempel Raya No.12, Semarang Barat",
@@ -88,8 +82,6 @@ export const cafes: CafeWithRelations[] = [
     reviewCount: 98,
     priceRange: "Rp25-50rb",
     area: "Kota Lama",
-    categorySlug: "24-jam",
-    categoryName: "24 Jam",
     description:
       "Tempat nongkrong 24 jam yang hits banget. Tersembunyi di dalam Kotta Hotel Semarang, kawasan Kota Lama. Vibenya cocok buat anak muda gaul dengan desain artsy dan estetik.",
     address: "Kotta Hotel Semarang, Jl. Letjen Suprapto No.29, Kota Lama",
@@ -110,8 +102,6 @@ export const cafes: CafeWithRelations[] = [
     reviewCount: 245,
     priceRange: "Rp25-50rb",
     area: "Simpang Lima",
-    categorySlug: "industrial",
-    categoryName: "Industrial",
     description:
       "Coffee shop dengan identitas industrial yang sangat kuat dan konsisten di setiap sudutnya. Area tribun yang estetik menjadi spot favorit pengunjung untuk berfoto atau sekadar duduk santai tanpa meja formal. Bangunan luas berlantai dua.",
     address: "Jl. Pandanaran No.25, Simpang Lima, Semarang",
@@ -133,8 +123,6 @@ export const cafes: CafeWithRelations[] = [
     reviewCount: 156,
     priceRange: "Rp30-100rb",
     area: "Kota Lama",
-    categorySlug: "cafe-eatery",
-    categoryName: "Cafe & Eatery",
     description:
       "Berada di kawasan bersejarah Kota Lama, kafe ini berhasil menggabungkan nuansa kontemporer dengan elemen industrial yang elegan. Suasananya estetik dan memberikan kesan mewah namun tetap ramah.",
     address: "Kawasan Kota Lama, Jl. Letjen Suprapto No.15, Semarang",
@@ -157,8 +145,6 @@ export const cafes: CafeWithRelations[] = [
     reviewCount: 203,
     priceRange: "Rp20-45rb",
     area: "Pusat Kota",
-    categorySlug: "rooftop",
-    categoryName: "Rooftop",
     description:
       "Primadona di pusat kota dengan tiga lantai yang masing-masing memiliki karakter berbeda. Area rooftop-nya menawarkan pemandangan kota Semarang yang sangat berkesan. Hidup namun tetap santai, jadi titik kumpul favorit berbagai komunitas.",
     address: "Jl. Pemuda No.88, Sekayu, Semarang Tengah",
@@ -179,8 +165,6 @@ export const cafes: CafeWithRelations[] = [
     reviewCount: 132,
     priceRange: "Rp10-35rb",
     area: "Gajah Mungkur",
-    categorySlug: "coffee-shop",
-    categoryName: "Coffee Shop",
     description:
       "Kedai kopi dengan interior hangat bernuansa kayu dan pencahayaan temaram. Bukaan kaca lebar memungkinkan cahaya matahari masuk di pagi hari. Tempat yang pas buat memulai hari dengan secangkir kopi.",
     address: "Jl. Gajah Mungkur No.45, Gajah Mungkur, Semarang",
@@ -194,95 +178,6 @@ export const cafes: CafeWithRelations[] = [
       { id: 37, name: "Ice Tea", description: "Teh manis segar", price: 10000, category: "Non-Kopi", isRecommended: false },
       { id: 38, name: "Mendoan", description: "Tempe mendoan crispy", price: 12000, category: "Makanan", isRecommended: true },
       { id: 39, name: "Croissant", description: "Croissant buttery homemade", price: 18000, category: "Makanan", isRecommended: false },
-    ],
-  },
-  {
-    id: 8,
-    name: "Anantari Coffee",
-    rating: 4.7,
-    reviewCount: 178,
-    priceRange: "Rp20-50rb",
-    area: "Tembalang",
-    categorySlug: "alam-outdoor",
-    categoryName: "Alam & Outdoor",
-    description:
-      "Hidden gem di kawasan Tembalang dengan pemandangan city lights Semarang dari ketinggian. Ruangan semi-indoor berbalut dekorasi kayu dan outdoor minimalis. Tempat escape dari hiruk-pikuk kota yang menenangkan.",
-    address: "Jl. Jangli, Tembalang, Semarang",
-    hours: "14:00 - 23:00",
-    phone: "0890-1234-5678",
-    instagram: "@anantaricoffee",
-    menus: [
-      { id: 40, name: "Kopi Susu Anantarian", description: "Kopi susu signature dengan homemade syrup", price: 30000, category: "Kopi", isRecommended: true },
-      { id: 41, name: "Iga Bakar Madu", description: "Iga sapi bakar madu, porsi besar (best seller)", price: 45000, category: "Makanan", isRecommended: true },
-      { id: 42, name: "Nasi Ayam Kedewatan", description: "Nasi ayam khas Bali", price: 35000, category: "Makanan", isRecommended: false },
-      { id: 43, name: "Mango Mocktail", description: "Mocktail mangga segar", price: 28000, category: "Non-Kopi", isRecommended: false },
-    ],
-  },
-  {
-    id: 9,
-    name: "Dermaga Kopi",
-    rating: 4.3,
-    reviewCount: 87,
-    priceRange: "Rp15-40rb",
-    area: "Gunung Pati",
-    categorySlug: "alam-outdoor",
-    categoryName: "Alam & Outdoor",
-    description:
-      "Kafe sederhana di tepi Waduk Jatibarang yang menyajikan sensasi ngopi dengan suasana air tenang dan nuansa alam. Bangunan kafe terletak tepat di dermaga kayu. Hidden gem yang cocok buat melepas penat dari hiruk-pikuk kota.",
-    address: "Kawasan Waduk Jatibarang, Kel. Kandri, Kec. Gunung Pati",
-    hours: "08:00 - 18:00",
-    phone: "0878-9012-3456",
-    instagram: "@dermagakopi",
-    menus: [
-      { id: 44, name: "Kopi Tubruk", description: "Kopi tubruk klasik khas Indonesia", price: 15000, category: "Kopi", isRecommended: true },
-      { id: 45, name: "Kopi Susu", description: "Kopi susu sederhana", price: 20000, category: "Kopi", isRecommended: false },
-      { id: 46, name: "Teh Manis", description: "Teh manis hangat/dingin", price: 10000, category: "Non-Kopi", isRecommended: false },
-      { id: 47, name: "Pisang Goreng", description: "Pisang goreng crispy", price: 15000, category: "Makanan", isRecommended: true },
-      { id: 48, name: "Mie Rebus", description: "Mie rebus sederhana", price: 18000, category: "Makanan", isRecommended: false },
-    ],
-  },
-  {
-    id: 10,
-    name: "Makabana Coffee House",
-    rating: 4.4,
-    reviewCount: 114,
-    priceRange: "Rp15-45rb",
-    area: "Tegalsari",
-    categorySlug: "coffee-shop",
-    categoryName: "Coffee Shop",
-    description:
-      "Tempat dengan vibe minimalis yang bikin betah. WiFi stabil, colokan banyak, dan pencahayaan oke buat ngetik berjam-jam. Pilihan tepat buat WFC atau ngerjain tugas sambil menikmati kopi.",
-    address: "Jl. Diponegoro No.22, Tegalsari, Semarang",
-    hours: "08:00 - 22:00",
-    phone: "0855-6789-0123",
-    instagram: "@makabanacoffee",
-    menus: [
-      { id: 49, name: "Kopi Susu Makabana", description: "Kopi susu khas Makabana", price: 25000, category: "Kopi", isRecommended: true },
-      { id: 50, name: "Americano", description: "Americano classic", price: 20000, category: "Kopi", isRecommended: false },
-      { id: 51, name: "Cafe Latte", description: "Latte creamy", price: 28000, category: "Kopi", isRecommended: false },
-      { id: 52, name: "Nasi Goreng", description: "Nasi goreng spesial", price: 35000, category: "Makanan", isRecommended: false },
-    ],
-  },
-  {
-    id: 11,
-    name: "Antara Kata Coffee",
-    rating: 4.5,
-    reviewCount: 167,
-    priceRange: "Rp13-50rb",
-    area: "Pedalangan",
-    categorySlug: "cafe-eatery",
-    categoryName: "Cafe & Eatery",
-    description:
-      "Cafe dengan gaya semi-rustic yang hits. Area outdoor-nya asik buat nulis ide atau sekadar santai. Menyajikan specialty coffee, aneka dessert, dan makanan sepanjang hari.",
-    address: "Jl. Duiran Raya No.65-67, Pedalangan, Semarang",
-    hours: "09:00 - 22:00",
-    phone: "0819-2345-6789",
-    instagram: "@antarakatacoffee",
-    menus: [
-      { id: 53, name: "Kopi Susu Klasik", description: "Kopi susu racikan klasik", price: 22000, category: "Kopi", isRecommended: true },
-      { id: 54, name: "Pandan Latte", description: "Latte dengan aroma pandan", price: 30000, category: "Kopi", isRecommended: false },
-      { id: 55, name: "Choco Hazelnut", description: "Coklat hazelnut hangat/dingin", price: 28000, category: "Non-Kopi", isRecommended: false },
-      { id: 56, name: "Pancake Fruit", description: "Pancake dengan topping buah segar", price: 32000, category: "Makanan", isRecommended: true },
     ],
   },
 ]
